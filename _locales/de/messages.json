@@ -1,0 +1,45 @@
+{
+  "extensionDescription": {
+    "message": "Erlaubt das Ändern der Sprachkennung, die an Webserver gesendet wird",
+    "description": "Description of the extension"
+  },
+
+  "menuentryDefault": {
+    "message": "Standard",
+    "description": "Menu entry to use browser default setting"
+  },
+  "menuentryEnglish": {
+    "message": "Englisch",
+    "description": "Menu entry for the English language"
+  },
+  "menuentryFrench": {
+    "message": "Französisch",
+    "description": "Menu entry for the French language"
+  },
+  "menuentryGerman": {
+    "message": "Deutsch",
+    "description": "Menu entry for the German language"
+  },
+  "menuentryJapanese": {
+    "message": "Japanisch",
+    "description": "Menu entry for the Japanese language"
+  },
+  "menuentrySpanish": {
+    "message": "Spanisch",
+    "description": "Menu entry for the Spanish language"
+  },
+
+  "menuentries_headline": {
+    "message": "Sprachmenü-Einträge",
+    "description": "Headline above the language entries configuration list"
+  },
+
+  "menuitem_label_label": {
+    "message": "Bezeichnung",
+    "description": "Header for the label column in config list"
+  },
+  "menuitem_value_label": {
+    "message": "Wert",
+    "description": "Header for the value column in config list"
+  }
+}

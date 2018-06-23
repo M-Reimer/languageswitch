@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg11300"
+   sodipodi:docname="languageswitch.svg"
+   inkscape:export-filename="languageswitch.png"
+   viewBox="0 0 32 32"
+   sodipodi:version="0.32"
+   inkscape:export-xdpi="192"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-ydpi="192"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   version="1.1"
+   width="32"
+   height="32">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="170"
+     pagecolor="#ffffff"
+     inkscape:showpageshadow="false"
+     inkscape:grid-bbox="true"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="-61.949607"
+     inkscape:window-height="1059"
+     showgrid="false"
+     borderopacity="0.25490196"
+     inkscape:current-layer="layer1"
+     stroke="#ef2929"
+     inkscape:cy="31.627114"
+     inkscape:window-x="550"
+     inkscape:window-width="1682"
+     inkscape:pageopacity="0.0"
+     inkscape:document-units="px"
+     fill="#edd400"
+     inkscape:window-maximized="0" />
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,-16)">
+    <g
+       id="g4556"
+       style="opacity:0.8">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 1.6517867,19.494362 c 6.4958296,-4.626933 18.1393143,1.375622 24.7571003,0 v 17.758022 c -6.373024,2.125756 -17.4029038,-4.501934 -24.7571003,0 l -0.03098,-16.069807 z"
+         style="color:#000000;display:block;fill:none;fill-rule:evenodd;stroke:#0c0c0d;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:nodetypes="cccccc"
+         id="rect15576" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 26.171363,27.761479 c 1.407246,0.170004 2.888616,0.06288 4.185797,-0.114148 v 17.757314 c -6.373024,2.125756 -17.403611,-4.501934 -24.7571006,0 v -9.895123"
+         style="color:#000000;display:block;fill:none;fill-rule:evenodd;stroke:#0c0c0d;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:nodetypes="ccccc"
+         id="path16504" />
+    </g>
+  </g>
+  <metadata
+     id="metadata43">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>tango preferences desktop locale</dc:title>
+        <dc:date>2010-03-29T08:31:38</dc:date>
+        <dc:description>&quot;Locale&quot; icon from &lt;a href=&quot;http://tango.freedesktop.org/Tango_Desktop_Project&quot;&gt; Tango Project &lt;/a&gt; 
+\n&lt;br&gt;&lt;br&gt;
+\nSince version 0.8.90 Tango Project icons are Public Domain: &lt;a href=&quot;http://tango.freedesktop.org/Frequently_Asked_Questions#Terms_of_Use.3F&quot;&gt; Tango Project FAQ &lt;/a&gt;</dc:description>
+        <dc:source>https://openclipart.org/detail/35275/tango-preferences-desktop-locale-by-warszawianka</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>warszawianka</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>externalsource</rdf:li>
+            <rdf:li>flag</rdf:li>
+            <rdf:li>green</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>purple</rdf:li>
+            <rdf:li>tango</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

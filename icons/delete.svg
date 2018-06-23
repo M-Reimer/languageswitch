@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg6431"
+   sodipodi:docname="list-multiply.svg"
+   viewBox="0 0 25.410345 25.487057"
+   sodipodi:version="0.32"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   version="1.1"
+   width="25.410345"
+   height="25.487057">
+  <defs
+     id="defs6433">
+    <linearGradient
+       id="linearGradient2474"
+       y2="34.977001"
+       gradientUnits="userSpaceOnUse"
+       x2="27.900999"
+       gradientTransform="matrix(0.70711,-0.70711,0.70711,0.70711,-11.705,23.999)"
+       y1="22.851999"
+       x1="16.875"
+       inkscape:collect="always">
+      <stop
+         id="stop7918"
+         style="stop-color:#ffffff"
+         offset="0" />
+      <stop
+         id="stop7920"
+         style="stop-color:#ffffff;stop-opacity:.34021"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="315"
+     pagecolor="#ffffff"
+     inkscape:window-height="870"
+     inkscape:grid-bbox="true"
+     inkscape:zoom="8.4410872"
+     inkscape:window-x="280"
+     showgrid="false"
+     borderopacity="0.15686275"
+     inkscape:current-layer="layer1"
+     inkscape:cx="-26.261929"
+     inkscape:cy="-1.9141673"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1859"
+     inkscape:pageopacity="0.0"
+     inkscape:document-units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-maximized="0" />
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-11.641112,-9.7135183)">
+    <g
+       id="g2464"
+       transform="translate(1.4048,-2.2554)">
+      <path
+         id="text1314"
+         sodipodi:nodetypes="ccccccccccccc"
+         style="fill:#f91918;fill-opacity:1;stroke:#b60000;stroke-width:1px;stroke-opacity:1"
+         d="m 34.297,31.09 -6.383,-6.383 7.027,-7.085 -4.946,-4.946 -7.05,7.049 -7.049,-7.036 -4.953,4.969 7.025,7.019 -7.011,7.116 4.902,4.953 7.075,-7.116 6.397,6.388 z"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path7076"
+         sodipodi:nodetypes="ccccccccccccc"
+         style="opacity:0.40860003;fill:none;fill-opacity:1;stroke:url(#linearGradient2474);stroke-width:1px"
+         d="m 32.866,31.094 -6.389,-6.388 7.073,-7.073 -3.557,-3.548 -7.062,7.062 -7.068,-7.067 -3.519,3.544 7.061,7.049 -7.077,7.102 3.498,3.535 7.123,-7.11 6.374,6.393 z"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path7914"
+         sodipodi:nodetypes="ccccccccs"
+         style="opacity:0.31183005;fill:#ffffff;fill-rule:evenodd"
+         d="m 23.133,24.348 c 1.292,-0.382 2.999,-0.29 4.38,0.087 3.049,-2.911 5.058,-4.946 6.767,-6.839 l -4.299,-4.215 -7.038,7.082 -7.047,-7.047 -4.242,4.243 7.046,7.047 c 1.311,0.354 2.732,0.145 4.433,-0.358 z"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>tango style multiply</dc:title>
+        <dc:date>2010-03-24T09:22:00</dc:date>
+        <dc:description>Remixed Tango &quot;list add&quot; icon.</dc:description>
+        <dc:source>https://openclipart.org/detail/33655/tango-style-multiply-by-warszawianka</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>warszawianka</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>cross</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>maths</rdf:li>
+            <rdf:li>multiply</rdf:li>
+            <rdf:li>remix</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>symbol</rdf:li>
+            <rdf:li>tango</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link href="options.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <form>
+      <h1 id="menuentries_headline">Language menu entries</h1>
+      <div id="menulist_header">
+        <div id="menuitem_label_label" class="menuitem_label">Label</div>
+        <div id="menuitem_value_label" class="menuitem_value">Value</div>
+        <img id="add_button" src="icons/add.svg"/>
+      </div>
+      <div id="menulist">
+      </div>
+    </form>
+    <div class="menuitem" id="menuitem_template">
+      <input class="menuitem_label" data-index="0" type="text"/>
+      <input class="menuitem_value" data-index="1" type="text"/>
+      <img class="up_button" src="icons/up.svg"/>
+      <img class="down_button" src="icons/down.svg"/>
+      <img class="delete_button" src="icons/delete.svg"/>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

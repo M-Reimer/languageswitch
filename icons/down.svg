@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg11300"
+   inkscape:export-ydpi="90.000000"
+   inkscape:export-filename="/home/jimmac/Desktop/wi-fi.png"
+   viewBox="0 0 34.990883 33.999901"
+   sodipodi:version="0.32"
+   inkscape:export-xdpi="90.000000"
+   version="1.0"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="down.svg"
+   width="34.990883"
+   height="33.999901">
+  <defs
+     id="defs3">
+    <radialGradient
+       id="radialGradient4559"
+       gradientUnits="userSpaceOnUse"
+       cy="1.535"
+       cx="15.987"
+       gradientTransform="matrix(0,2.0467,1.5576,0,2.3811,-22.965)"
+       r="17.171"
+       inkscape:collect="always">
+      <stop
+         id="stop8652"
+         style="stop-color:#ffffff"
+         offset="0" />
+      <stop
+         id="stop8654"
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1" />
+    </radialGradient>
+    <radialGradient
+       id="radialGradient4562"
+       gradientUnits="userSpaceOnUse"
+       cy="20.493999"
+       cx="35.292999"
+       gradientTransform="matrix(0,0.84302,-1.0202,0,45.89,1.3815)"
+       r="16.955999"
+       inkscape:collect="always">
+      <stop
+         id="stop1444"
+         style="stop-color:#729fcf"
+         offset="0" />
+      <stop
+         id="stop1446"
+         style="stop-color:#3465a4"
+         offset="1" />
+    </radialGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     pagecolor="#ffffff"
+     inkscape:showpageshadow="false"
+     inkscape:grid-bbox="true"
+     inkscape:zoom="7.1739066"
+     inkscape:pageshadow="2"
+     stroke="#4e9a06"
+     showgrid="false"
+     borderopacity="0.25490196"
+     inkscape:current-layer="layer1"
+     inkscape:cx="-3.9378283"
+     inkscape:cy="19.691468"
+     inkscape:window-width="1280"
+     inkscape:pageopacity="0.0"
+     inkscape:window-height="778"
+     inkscape:document-units="px"
+     fill="#4e9a06"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-maximized="0" />
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-5.4771586,-4.9676707)">
+    <g
+       id="g4599">
+      <path
+         id="path8643"
+         sodipodi:nodetypes="cccccccc"
+         style="fill:url(#radialGradient4562);fill-rule:evenodd;stroke:#183868;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 31.978,5.4677 13.973,5.4716 v 12.991 l -7.9959,0.008 17.145,19.997 16.846,-19.998 -7.996,-0.003 0.006,-12.999 z"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path8645"
+         sodipodi:nodetypes="cccccc"
+         style="opacity:0.50801996;fill:url(#radialGradient4559);fill-rule:evenodd"
+         d="M 7.0668,18.974 14.473,18.962 14.47,5.97 29.849,5.9788 c -0.77,18.341 -10.723,10.993 -15.382,21.647 l -7.4002,-8.652 z"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path8658"
+         sodipodi:nodetypes="cccccccc"
+         style="opacity:0.48128004;fill:none;stroke:#ffffff;stroke-miterlimit:10"
+         d="M 30.976,6.4716 14.975,6.4677 v 12.993 l -6.8172,0.015 14.954,17.453 14.707,-17.457 -6.84,-0.005 -0.003,-12.995 z"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>tango blue go down</dc:title>
+        <dc:date>2010-03-09T18:40:19</dc:date>
+        <dc:description>This is modified Tango icon go-down (colors changed to blue).</dc:description>
+        <dc:source>https://openclipart.org/detail/30673/tango-blue-go-down-by-warszawianka</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>warszawianka</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>arrow</rdf:li>
+            <rdf:li>blue</rdf:li>
+            <rdf:li>down</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>symbol</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

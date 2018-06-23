@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "Language Switch",
+  "version": "1.0.0",
+
+  "description": "__MSG_extensionDescription__",
+
+  "applications": {
+    "gecko": {
+      "id": "{6e1ccc3a-6961-4b99-9455-e04cb868e7f9}",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "icons": {
+    "24": "icons/languageswitch.svg",
+    "32": "icons/languageswitch.svg",
+    "50": "icons/languageswitch.svg"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/languageswitch.svg",
+    "default_popup": "popup/choose_language.html",
+    "theme_icons": [{
+      "dark": "icons/languageswitch.svg",
+      "light": "icons/languageswitch-light.svg",
+      "size": 19
+    }]
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "open_in_tab": false
+  },
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+
+  "default_locale": "en"
+}

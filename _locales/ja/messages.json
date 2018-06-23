@@ -1,0 +1,45 @@
+{
+  "extensionDescription": {
+    "message": "Allows to change the language identifier sent to webservers",
+    "description": "Description of the extension"
+  },
+
+  "menuentryDefault": {
+    "message": "デフォルト",
+    "description": "Menu entry to use browser default setting"
+  },
+  "menuentryEnglish": {
+    "message": "英語",
+    "description": "Menu entry for the English language"
+  },
+  "menuentryFrench": {
+    "message": "フランス語",
+    "description": "Menu entry for the French language"
+  },
+  "menuentryGerman": {
+    "message": "ドイツ語",
+    "description": "Menu entry for the German language"
+  },
+  "menuentryJapanese": {
+    "message": "日本語",
+    "description": "Menu entry for the Japanese language"
+  },
+  "menuentrySpanish": {
+    "message": "スペイン語",
+    "description": "Menu entry for the Spanish language"
+  },
+
+  "menuentries_headline": {
+    "message": "Language menu entries",
+    "description": "Headline above the language entries configuration list"
+  },
+
+  "menuitem_label_label": {
+    "message": "表示名",
+    "description": "Header for the label column in config list"
+  },
+  "menuitem_value_label": {
+    "message": "値",
+    "description": "Header for the value column in config list"
+  }
+}

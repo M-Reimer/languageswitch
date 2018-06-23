@@ -1,0 +1,24 @@
+
+#menuitem_template {
+  display: none;
+}
+
+.menuitem_label {
+  width: 10em;
+}
+
+.menuitem_value {
+  width: 20em;
+}
+
+#menulist_header > div {
+  display: inline-block;
+}
+
+.menuitem > img,
+#menulist_header > img {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+  cursor: pointer;
+}
