@@ -3,12 +3,17 @@
   display: none;
 }
 
+input {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .menuitem_label {
-  width: 10em;
+  width: 10rem;
 }
 
 .menuitem_value {
-  width: 20em;
+  width: 20rem;
 }
 
 #menulist_header > div {
