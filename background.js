@@ -17,7 +17,7 @@
 */
 
 // Holds the current Accept-Language value
-let gCurrentValue;
+let gAcceptLanguage;
 
 // Loads settings from storage
 // Also prepares a default set of menu entries if nothing is stored.
@@ -27,39 +27,52 @@ let gCurrentValue;
 async function LoadSettings() {
   const prefs = await browser.storage.local.get();
 
-  gCurrentValue = prefs.currentvalue || "";
+  const currentvalue = prefs.currentvalue || "";
+  gAcceptLanguage = LanguageStringToAcceptLanguage(currentvalue);
 
   if (!prefs.menuentries) {
     const menuentries = [
       [browser.i18n.getMessage("menuentryDefault"),  ""],
-      [browser.i18n.getMessage("menuentryEnglish"),  "en-us,en"],
-      [browser.i18n.getMessage("menuentryFrench"),   "fr-fr,fr,en-us,en"],
-      [browser.i18n.getMessage("menuentryGerman"),   "de-de,de,en-us,en"],
-      [browser.i18n.getMessage("menuentryJapanese"), "ja,en-us,en"],
-      [browser.i18n.getMessage("menuentrySpanish"),  "es-es,es,en-us,en"]
+      [browser.i18n.getMessage("menuentryEnglish"),  "en-US,en"],
+      [browser.i18n.getMessage("menuentryFrench"),   "fr-FR,fr,en-US,en"],
+      [browser.i18n.getMessage("menuentryGerman"),   "de-DE,de,en-US,en"],
+      [browser.i18n.getMessage("menuentryJapanese"), "ja,en-US,en"],
+      [browser.i18n.getMessage("menuentrySpanish"),  "es-ES,es,en-US,en"]
     ];
     await browser.storage.local.set({menuentries: menuentries});
   }
 }
 
-// Getter for the current language string
-function GetCurrentValue() {
-  return gCurrentValue;
+// Converts language list (as given by user) to the correct format for the
+// Accept-Language header (auto-generate quality values)
+function LanguageStringToAcceptLanguage(aLangString) {
+  const inputlist = aLangString.split(",");
+  const outputlist = [];
+  const digits = (inputlist.length > 10) ? 2 : 1;
+  for (let index = 0; index < inputlist.length; index++) {
+    if (index == 0)
+      outputlist.push(inputlist[0]);
+    else {
+      const quality = (inputlist.length - index) / inputlist.length;
+      outputlist.push(inputlist[index] + ";q=" + quality.toFixed(digits));
+    }
+  }
+  return outputlist.join(",");
 }
 
 // Setter for the current language string
 // Also stores the changed value
 function SetCurrentValue(aValue) {
-  gCurrentValue = aValue;
-  browser.storage.local.set({currentvalue: gCurrentValue});
+  browser.storage.local.set({currentvalue: aValue});
+  gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
 }
 
 // Header rewrite handler. Rewrites "Accept-Language".
 function RewriteAcceptLanguage(e) {
-  if (gCurrentValue != "") {
+  if (gAcceptLanguage != "") {
     e.requestHeaders.forEach(function(header){
       if (header.name.toLowerCase() == "accept-language")
-        header.value = gCurrentValue;
+        header.value = gAcceptLanguage;
     });
   }
   return {requestHeaders: e.requestHeaders};
