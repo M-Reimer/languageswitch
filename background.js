@@ -29,6 +29,7 @@ async function LoadSettings() {
 
   const currentvalue = prefs.currentvalue || "";
   gAcceptLanguage = LanguageStringToAcceptLanguage(currentvalue);
+  OverrideNavigatorLanguage(currentvalue);
 
   if (!prefs.menuentries) {
     const menuentries = [
@@ -65,6 +66,31 @@ function LanguageStringToAcceptLanguage(aLangString) {
 function SetCurrentValue(aValue) {
   browser.storage.local.set({currentvalue: aValue});
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
+  OverrideNavigatorLanguage(aValue);
+}
+
+// This block injects our language override into "navigator.language"
+let gContentScript = false;
+async function OverrideNavigatorLanguage(aValue) {
+  // Always unregister old content scripts first
+  if (gContentScript) {
+    gContentScript.unregister();
+    gContentScript = false;
+  }
+
+  // Split off the first (highest priority) item and sanitize it.
+  const language = aValue.split(",")[0].replace(/[^a-zA-Z-]/g, "");
+
+  // If a language is set, then override "navigator.language".
+  if (language != "") {
+    const script = "Object.defineProperty(window.navigator.wrappedJSObject, 'language', {value: '" + language + "'});"
+    gContentScript = await browser.contentScripts.register({
+      "js": [{code: script}],
+      "matches": ["<all_urls>"],
+      "allFrames": true,
+      "runAt": "document_start"
+    });
+  }
 }
 
 // Header rewrite handler. Rewrites "Accept-Language".
