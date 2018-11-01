@@ -22,12 +22,19 @@ async function CreateButtons() {
 
   prefs.menuentries.forEach((entry) => {
     const div = document.createElement("div");
-    if (entry[1] == currentvalue)
-      div.setAttribute("class", "button selected");
-    else
-      div.setAttribute("class", "button");
+    div.setAttribute("class", "button");
     div.setAttribute("data-value", entry[1]);
-    div.textContent = entry[0];
+
+    const check = document.createElement("span");
+    check.setAttribute("class", "check");
+    if (entry[1] == currentvalue)
+      check.textContent = "✔";
+
+    const text = document.createElement("span");
+    text.textContent = entry[0];
+
+    div.appendChild(check);
+    div.appendChild(text);
     document.body.appendChild(div);
   });
 }

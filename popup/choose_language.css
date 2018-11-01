@@ -1,24 +1,22 @@
 body {
-  padding: 4px;
+  margin: 0px;
+  padding: 6px 0px;
 }
 
 .button {
   margin: 0px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  padding: 0px 3px 0px 3px;
-  text-align: center;
-  cursor: pointer;
+  padding: 4px 10px;
+}
+
+.button > span {
+  pointer-events: none;
 }
 
 .button:hover {
   background-color: #f0f0f0;
-  border-color: #b6b6b3;
-  border-style: solid;
-  border-radius: 2px;
 }
 
-.selected:before {
-  content: "✓ ";
+.check {
+  display: inline-block;
+  width: 20px;
 }
