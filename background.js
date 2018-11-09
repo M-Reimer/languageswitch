@@ -78,12 +78,14 @@ async function OverrideNavigatorLanguage(aValue) {
     gContentScript = false;
   }
 
-  // Split off the first (highest priority) item and sanitize it.
-  const language = aValue.split(",")[0].replace(/[^a-zA-Z-]/g, "");
+  // Split language string and sanitize the values
+  const languages = aValue.split(",").map(e => e.replace(/[^a-zA-Z-]/g, ""));
 
-  // If a language is set, then override "navigator.language".
-  if (language != "") {
-    const script = "Object.defineProperty(window.navigator.wrappedJSObject, 'language', {value: '" + language + "'});"
+  // If a language is set, then override "navigator.language(s)".
+  if (languages.length != 0 && languages[0] != "") {
+    const script =
+    "Object.defineProperty(window.navigator.wrappedJSObject, 'language', {value: '" + languages[0] + "'});" +
+    "Object.defineProperty(window.navigator.wrappedJSObject, 'languages', {value: cloneInto(['" + languages.join("','") + "'], window.navigator)});";
     gContentScript = await browser.contentScripts.register({
       "js": [{code: script}],
       "matches": ["<all_urls>"],
