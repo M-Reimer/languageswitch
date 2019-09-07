@@ -1,6 +1,6 @@
 /*
     Firefox addon "Language Switch"
-    Copyright (C) 2018  Manuel Reimer <manuel.reimer@gmx.de>
+    Copyright (C) 2019  Manuel Reimer <manuel.reimer@gmx.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -115,3 +115,5 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 // Load settings
 LoadSettings();
+
+IconUpdater.Init("icons/languageswitch.svg");

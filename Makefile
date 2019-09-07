@@ -5,6 +5,7 @@
 
 FILES = manifest.json \
         background.js \
+        iconupdater.js \
         options.html \
         options.js \
         options.css \
