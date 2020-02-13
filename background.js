@@ -83,8 +83,8 @@ async function OverrideNavigatorLanguage(aValue) {
     gContentScript = false;
   }
 
-  // Split language string
-  const languages = aValue.split(",");
+  // Split language string and sanitize the values
+  const languages = aValue.split(",").map(e => e.replace(/[^a-zA-Z-]/g, ""));
 
   // If a language is set, then override "navigator.language(s)".
   if (languages.length != 0 && languages[0] != "") {
