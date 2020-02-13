@@ -118,6 +118,9 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   ["blocking", "requestHeaders"]
 );
 
+// Set background color to a non-intrusive gray
+browser.browserAction.setBadgeBackgroundColor({color: "#666666"});
+
 // Load settings
 LoadSettings();
 
