@@ -27,9 +27,7 @@ let gAcceptLanguage;
 async function LoadSettings() {
   const prefs = await browser.storage.local.get();
 
-  const currentvalue = prefs.currentvalue || "";
-  gAcceptLanguage = LanguageStringToAcceptLanguage(currentvalue);
-  OverrideNavigatorLanguage(currentvalue);
+  SetCurrentValue(prefs.currentvalue || "", false);
 
   if (!prefs.menuentries) {
     const menuentries = [
@@ -63,10 +61,12 @@ function LanguageStringToAcceptLanguage(aLangString) {
 
 // Setter for the current language string
 // Also stores the changed value
-function SetCurrentValue(aValue) {
-  browser.storage.local.set({currentvalue: aValue});
+function SetCurrentValue(aValue, aStore = true) {
+  if (aStore)
+    browser.storage.local.set({currentvalue: aValue});
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
   OverrideNavigatorLanguage(aValue);
+  browser.browserAction.setBadgeText({text: aValue.substr(0, 2)});
 }
 
 // This block injects our language override into "navigator.language"
