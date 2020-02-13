@@ -64,6 +64,11 @@ function LanguageStringToAcceptLanguage(aLangString) {
 function SetCurrentValue(aValue, aStore = true) {
   if (aStore)
     browser.storage.local.set({currentvalue: aValue});
+
+  // Sanitize value before using it
+  aValue = aValue.replace(/[^a-zA-Z,-]/g, "");
+
+  // Update status based on the given value
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
   OverrideNavigatorLanguage(aValue);
   browser.browserAction.setBadgeText({text: aValue.substr(0, 2)});
@@ -78,8 +83,8 @@ async function OverrideNavigatorLanguage(aValue) {
     gContentScript = false;
   }
 
-  // Split language string and sanitize the values
-  const languages = aValue.split(",").map(e => e.replace(/[^a-zA-Z-]/g, ""));
+  // Split language string
+  const languages = aValue.split(",");
 
   // If a language is set, then override "navigator.language(s)".
   if (languages.length != 0 && languages[0] != "") {
