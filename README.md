@@ -3,7 +3,7 @@ Language Switch
 
 Main repository: https://github.com/M-Reimer/languageswitch.
 
-AMO: https://addons.mozilla.org/en-US/firefox/addon/languageswitch/
+AMO: https://addons.mozilla.org/firefox/addon/languageswitch/
 
 Localization: https://lusito.github.io/web-ext-translator/?gh=https://github.com/M-Reimer/languageswitch/
 
