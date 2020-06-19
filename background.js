@@ -27,9 +27,7 @@ let gAcceptLanguage;
 async function LoadSettings() {
   const prefs = await browser.storage.local.get();
 
-  const currentvalue = prefs.currentvalue || "";
-  gAcceptLanguage = LanguageStringToAcceptLanguage(currentvalue);
-  OverrideNavigatorLanguage(currentvalue);
+  SetCurrentValue(prefs.currentvalue || "", false);
 
   if (!prefs.menuentries) {
     const menuentries = [
@@ -63,10 +61,17 @@ function LanguageStringToAcceptLanguage(aLangString) {
 
 // Setter for the current language string
 // Also stores the changed value
-function SetCurrentValue(aValue) {
-  browser.storage.local.set({currentvalue: aValue});
+function SetCurrentValue(aValue, aStore = true) {
+  if (aStore)
+    browser.storage.local.set({currentvalue: aValue});
+
+  // Sanitize value before using it
+  aValue = aValue.replace(/[^a-zA-Z,-]/g, "");
+
+  // Update status based on the given value
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
   OverrideNavigatorLanguage(aValue);
+  browser.browserAction.setBadgeText({text: aValue.substr(0, 2)});
 }
 
 // Register event listener to receive change requests from our popup
@@ -118,6 +123,9 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   {urls: ["<all_urls>"]},
   ["blocking", "requestHeaders"]
 );
+
+// Set background color to a non-intrusive gray
+browser.browserAction.setBadgeBackgroundColor({color: "#666666"});
 
 // Load settings
 LoadSettings();
