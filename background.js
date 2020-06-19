@@ -1,6 +1,6 @@
 /*
     Firefox addon "Language Switch"
-    Copyright (C) 2019  Manuel Reimer <manuel.reimer@gmx.de>
+    Copyright (C) 2020  Manuel Reimer <manuel.reimer@gmx.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,6 +68,12 @@ function SetCurrentValue(aValue) {
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
   OverrideNavigatorLanguage(aValue);
 }
+
+// Register event listener to receive change requests from our popup
+browser.runtime.onMessage.addListener((data, sender) => {
+  if (data.type == "SetCurrentValue")
+    SetCurrentValue(data.value);
+});
 
 // This block injects our language override into "navigator.language"
 let gContentScript = false;

@@ -1,6 +1,6 @@
 /*
     Firefox addon "Language Switch"
-    Copyright (C) 2018  Manuel Reimer <manuel.reimer@gmx.de>
+    Copyright (C) 2020  Manuel Reimer <manuel.reimer@gmx.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ async function CreateButtons() {
 document.addEventListener("click", async (e) => {
   if (e.target.classList.contains("button")) {
     const value = e.target.getAttribute("data-value");
-    browser.extension.getBackgroundPage().SetCurrentValue(value);
+    await browser.runtime.sendMessage({type: "SetCurrentValue", value: value});
     window.close();
   }
 });
