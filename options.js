@@ -38,6 +38,7 @@ async function Init() {
 
 async function StoreList() {
   await browser.storage.local.set({menuentries: gMenuentries});
+  await browser.runtime.sendMessage({type: "OptionsChanged"});
 }
 
 // Syncs "gMenuentries" to the user interface
@@ -71,6 +72,15 @@ async function UpdateMenuList() {
     menuitem.getElementsByClassName("menuitem_value")[0].value = entry[1];
   }
 }
+
+// Register event listener to receive option update notifications
+browser.runtime.onMessage.addListener(async (data, sender) => {
+  if (data.type == "OptionsChanged") {
+    const prefs = await browser.storage.local.get("menuentries");
+    gMenuentries = prefs.menuentries || [];
+    UpdateMenuList();
+  }
+});
 
 // Reads the item index from a node (via event)
 function EventToItemIndex(aEvent) {

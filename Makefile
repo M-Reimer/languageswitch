@@ -33,4 +33,4 @@ clean:
 
 # Starts local debug session
 run: icons/$(ADDON)-light.svg
-	web-ext run --pref=devtools.browserconsole.contentMessages=true --bc
+	web-ext run --bc
