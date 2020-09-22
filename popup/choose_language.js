@@ -17,8 +17,8 @@
 */
 
 async function CreateButtons() {
-  const prefs = await browser.storage.local.get();
-  const currentvalue = prefs.currentvalue || "";
+  const prefs = await Storage.get();
+  const currentvalue = prefs.currentvalue;
 
   prefs.menuentries.forEach((entry) => {
     const div = document.createElement("div");

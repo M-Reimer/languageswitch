@@ -20,26 +20,10 @@
 let gAcceptLanguage;
 
 // Loads settings from storage
-// Also prepares a default set of menu entries if nothing is stored.
-// They are only here as an example and to have some entries directly
-// after installation.
-// Please *NO* pull-requests to add your language here!
 async function LoadSettings() {
-  const prefs = await browser.storage.local.get();
+  const prefs = await Storage.get();
 
-  SetCurrentValue(prefs.currentvalue || "", false);
-
-  if (!prefs.menuentries) {
-    const menuentries = [
-      [browser.i18n.getMessage("menuentryDefault"),  ""],
-      [browser.i18n.getMessage("menuentryEnglish"),  "en-US,en"],
-      [browser.i18n.getMessage("menuentryFrench"),   "fr-FR,fr,en-US,en"],
-      [browser.i18n.getMessage("menuentryGerman"),   "de-DE,de,en-US,en"],
-      [browser.i18n.getMessage("menuentryJapanese"), "ja,en-US,en"],
-      [browser.i18n.getMessage("menuentrySpanish"),  "es-ES,es,en-US,en"]
-    ];
-    await browser.storage.local.set({menuentries: menuentries});
-  }
+  await SetCurrentValue(prefs.currentvalue, false);
 }
 
 // Converts language list (as given by user) to the correct format for the
@@ -61,17 +45,33 @@ function LanguageStringToAcceptLanguage(aLangString) {
 
 // Setter for the current language string
 // Also stores the changed value
-function SetCurrentValue(aValue, aStore = true) {
+let _last_value = false;
+async function SetCurrentValue(aValue, aStore = true) {
   if (aStore)
-    browser.storage.local.set({currentvalue: aValue});
+    Storage.set({currentvalue: aValue});
 
   // Sanitize value before using it
   aValue = aValue.replace(/[^a-zA-Z,-]/g, "");
+
+  // If this is the last set value, then return
+  if (aValue == _last_value)
+    return;
 
   // Update status based on the given value
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
   OverrideNavigatorLanguage(aValue);
   browser.browserAction.setBadgeText({text: aValue.substr(0, 2)});
+
+  // Reload current tab if enabled in settings
+  if (aStore) {
+    const prefs = await Storage.get();
+    const autoreload = prefs.autoreload || false;
+    if (autoreload)
+      browser.tabs.reload();
+  }
+
+  // Remember the currently handled value as the last set value
+  _last_value = aValue;
 }
 
 // Register event listener to receive change requests from our popup

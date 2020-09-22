@@ -1,6 +1,6 @@
 /*
     Firefox addon "Language Switch"
-    Copyright (C) 2018  Manuel Reimer <manuel.reimer@gmx.de>
+    Copyright (C) 2020  Manuel Reimer <manuel.reimer@gmx.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 
 const gTemplate = document.getElementById("menuitem_template");
 const gMenulist = document.getElementById("menulist");
+const checkAutoReload = document.getElementById("autoreload_checkbox");
 let gMenuentries;
 
 async function Init() {
@@ -31,13 +32,14 @@ async function Init() {
 
   document.getElementById("add_button").addEventListener("click", ListItemAddClicked);
 
-  const prefs = await browser.storage.local.get("menuentries");
-  gMenuentries = prefs.menuentries || [];
+  await loadOptions();
+  checkAutoReload.addEventListener("change", CheckboxChanged);
+
   await UpdateMenuList();
 }
 
 async function StoreList() {
-  await browser.storage.local.set({menuentries: gMenuentries});
+  await Storage.set({menuentries: gMenuentries});
   await browser.runtime.sendMessage({type: "OptionsChanged"});
 }
 
@@ -76,7 +78,7 @@ async function UpdateMenuList() {
 // Register event listener to receive option update notifications
 browser.runtime.onMessage.addListener(async (data, sender) => {
   if (data.type == "OptionsChanged") {
-    const prefs = await browser.storage.local.get("menuentries");
+    const prefs = await Storage.get();
     gMenuentries = prefs.menuentries || [];
     UpdateMenuList();
   }
@@ -130,6 +132,21 @@ function ListItemDeleteClicked(aEvent) {
   gMenuentries.splice(itemindex, 1);
   UpdateMenuList();
   StoreList();
+}
+
+async function CheckboxChanged(e) {
+  if (e.target.id.match(/([a-z_]+)_checkbox/)) {
+    let pref = RegExp.$1;
+    let params = {};
+    params[pref] = e.target.checked;
+    await browser.storage.local.set(params);
+  }
+}
+
+async function loadOptions() {
+  const prefs = await Storage.get()
+  checkAutoReload.checked = prefs.autoreload;
+  gMenuentries = prefs.menuentries;
 }
 
 Init();
