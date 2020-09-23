@@ -34,8 +34,6 @@ async function Init() {
 
   await loadOptions();
   checkAutoReload.addEventListener("change", CheckboxChanged);
-
-  await UpdateMenuList();
 }
 
 async function StoreList() {
@@ -74,15 +72,6 @@ async function UpdateMenuList() {
     menuitem.getElementsByClassName("menuitem_value")[0].value = entry[1];
   }
 }
-
-// Register event listener to receive option update notifications
-browser.runtime.onMessage.addListener(async (data, sender) => {
-  if (data.type == "OptionsChanged") {
-    const prefs = await Storage.get();
-    gMenuentries = prefs.menuentries || [];
-    UpdateMenuList();
-  }
-});
 
 // Reads the item index from a node (via event)
 function EventToItemIndex(aEvent) {
@@ -139,7 +128,8 @@ async function CheckboxChanged(e) {
     let pref = RegExp.$1;
     let params = {};
     params[pref] = e.target.checked;
-    await browser.storage.local.set(params);
+    await Storage.set(params);
+    await browser.runtime.sendMessage({type: "OptionsChanged"});
   }
 }
 
@@ -147,6 +137,13 @@ async function loadOptions() {
   const prefs = await Storage.get()
   checkAutoReload.checked = prefs.autoreload;
   gMenuentries = prefs.menuentries;
+  await UpdateMenuList();
 }
+
+// Register event listener to receive option update notifications
+browser.runtime.onMessage.addListener(async (data, sender) => {
+  if (data.type == "OptionsChanged")
+    loadOptions();
+});
 
 Init();
