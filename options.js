@@ -23,6 +23,8 @@ let gMenuentries;
 
 async function Init() {
   [
+    "general_headline",
+    "autoreload_label",
     "menuentries_headline",
     "menuitem_label_label",
     "menuitem_value_label"

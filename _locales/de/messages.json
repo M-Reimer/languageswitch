@@ -29,6 +29,16 @@
     "description": "Menu entry for the Spanish language"
   },
 
+  "general_headline": {
+    "message": "Allgemein",
+    "description": "Headline above the general configuration options"
+  },
+
+  "autoreload_label": {
+    "message": "Bei Umschalten die aktuelle Seite neu laden",
+    "description": "Label for the checkbox for enabling autoreload"
+  },
+
   "menuentries_headline": {
     "message": "Sprachmenü-Einträge",
     "description": "Headline above the language entries configuration list"
