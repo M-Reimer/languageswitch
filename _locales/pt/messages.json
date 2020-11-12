@@ -5,45 +5,55 @@
   },
 
   "menuentryDefault": {
-    "message": "デフォルト",
+    "message": "Padrão",
     "description": "Menu entry to use browser default setting"
   },
   "menuentryEnglish": {
-    "message": "英語",
+    "message": "Inglês",
     "description": "Menu entry for the English language"
   },
   "menuentryFrench": {
-    "message": "フランス語",
+    "message": "Francês",
     "description": "Menu entry for the French language"
   },
   "menuentryGerman": {
-    "message": "ドイツ語",
+    "message": "Alemão",
     "description": "Menu entry for the German language"
   },
   "menuentryJapanese": {
-    "message": "日本語",
+    "message": "Japonês",
     "description": "Menu entry for the Japanese language"
   },
   "menuentryPortuguese": {
-    "message": "ポルトガル語",
+    "message": "Português",
     "description": "Menu entry for the Japanese language"
   },
   "menuentrySpanish": {
-    "message": "スペイン語",
+    "message": "Espanhol",
     "description": "Menu entry for the Spanish language"
   },
 
+  "general_headline": {
+    "message": "Geral",
+    "description": "Headline above the general configuration options"
+  },
+
+  "autoreload_label": {
+    "message": "Recarrega automaticamente a página atual ao mudar",
+    "description": "Label for the checkbox for enabling autoreload"
+  },
+
   "menuentries_headline": {
-    "message": "Language menu entries",
+    "message": "Entradas do menu de idioma",
     "description": "Headline above the language entries configuration list"
   },
 
   "menuitem_label_label": {
-    "message": "表示名",
+    "message": "Rótulo",
     "description": "Header for the label column in config list"
   },
   "menuitem_value_label": {
-    "message": "値",
+    "message": "Valor",
     "description": "Header for the value column in config list"
   }
 }

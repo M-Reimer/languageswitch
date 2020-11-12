@@ -24,6 +24,10 @@
     "message": "Japanisch",
     "description": "Menu entry for the Japanese language"
   },
+  "menuentryPortuguese": {
+    "message": "Portugiesisch",
+    "description": "Menu entry for the Japanese language"
+  },
   "menuentrySpanish": {
     "message": "Spanisch",
     "description": "Menu entry for the Spanish language"

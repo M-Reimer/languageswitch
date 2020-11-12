@@ -28,6 +28,7 @@ const Storage = {
       [browser.i18n.getMessage("menuentryFrench"),   "fr-FR,fr,en-US,en"],
       [browser.i18n.getMessage("menuentryGerman"),   "de-DE,de,en-US,en"],
       [browser.i18n.getMessage("menuentryJapanese"), "ja,en-US,en"],
+      [browser.i18n.getMessage("menuentryPortuguese"),  "pt-BR,pt,en-US,en"],
       [browser.i18n.getMessage("menuentrySpanish"),  "es-ES,es,en-US,en"]
     ],
     "currentvalue": "",

@@ -29,6 +29,11 @@
     "description": "Menu entry for the Japanese language",
     "hash": "ed0730b295dca59e5a09fa843eb87c8d"
   },
+  "menuentryPortuguese": {
+    "message": "portugisisk",
+    "description": "Menu entry for the Japanese language",
+    "hash": "ed0730b295dca59e5a09fa843eb87c8d"
+  },
   "menuentrySpanish": {
     "message": "spansk",
     "description": "Menu entry for the Spanish language",
