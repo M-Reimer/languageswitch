@@ -19,9 +19,11 @@
 // Central place for storage handling and preference defaults
 const Storage = {
   _defaults: {
+    // TRANSLATION NOTE!
     // These defaults are only here as an example and to have some entries
     // directly after installation.
     // Please *NO* pull-requests to add your language here!
+    //        ‾‾‾‾
     "menuentries": [
       [browser.i18n.getMessage("menuentryDefault"),  ""],
       [browser.i18n.getMessage("menuentryEnglish"),  "en-US,en"],
