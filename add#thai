@@ -34,9 +34,9 @@
     "description": "Menu entry for the Spanish language",
     "hash": "c58ca0cfe7f76c9bef2da8033fd644eb"
   },
-  "menuentrySpanish": {
-    "message": "spansk",
-    "description": "Menu entry for the Spanish language",
+  "menuentryThai": {
+    "message": "thai",
+    "description": "Menu entry for the Thai language",
     "hash": "c58ca0cfe7f76c9bef2da8033fd644eb"
   },
   "menuentries_headline": {
