@@ -1,0 +1,64 @@
+{
+  "extensionDescription": {
+    "message": "Позволяет менять языковой идентификатор отправляемый серверам",
+    "description": "Description of the extension",
+    "hash": "098663c971e4d0add100963aa184d584"
+  },
+  "menuentryDefault": {
+    "message": "По умолчанию",
+    "description": "Menu entry to use browser default setting",
+    "hash": "229c53203d001a81c6535deec232da82"
+  },
+  "menuentryEnglish": {
+    "message": "Английский",
+    "description": "Menu entry for the English language",
+    "hash": "648e324401faf8ae90395ce21e894596"
+  },
+  "menuentryFrench": {
+    "message": "Французкий",
+    "description": "Menu entry for the French language",
+    "hash": "09a22929e52b1a0c2d830c4415f09290"
+  },
+  "menuentryGerman": {
+    "message": "Немецкий",
+    "description": "Menu entry for the German language",
+    "hash": "730e124165ee254c3f3c34c40acc10dc"
+  },
+  "menuentryJapanese": {
+    "message": "Японский",
+    "description": "Menu entry for the Japanese language",
+    "hash": "ed0730b295dca59e5a09fa843eb87c8d"
+  },
+  "menuentrySpanish": {
+    "message": "Испанский",
+    "description": "Menu entry for the Spanish language",
+    "hash": "c58ca0cfe7f76c9bef2da8033fd644eb"
+  },
+  "general_headline": {
+    "message": "Основные настройки",
+    "description": "Headline above the general configuration options",
+    "hash": "e90d858c95232c95e34b4bb2f25b69e4"
+  },
+  "autoreload_label": {
+    "message": "Автоматически перезагрузить страницу под выбранный язык",
+    "description": "Label for the checkbox for enabling autoreload",
+    "hash": "26802ad9917a0ade59319025480aa5cf"
+  },
+  "menuentries_headline": {
+    "message": "Меню значений для подмены",
+    "description": "Headline above the language entries configuration list",
+    "hash": "90fd7720b2260141221ab9a175d4d805"
+  },
+  "menuitem_label_label": {
+    "message": "Язык",
+    "description": "Header for the label column in config list",
+    "hash": "6af54e4f44a97d7e4a804e2e9a2536e5"
+  },
+  "menuitem_value_label": {
+    "message": "Значение",
+    "description": "Header for the value column in config list",
+    "hash": "44e8c8817b22394520de33b6e522a806"
+  },
+
+  "__WET_LOCALE__": { "message": "ru" }
+}
