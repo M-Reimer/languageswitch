@@ -5,6 +5,7 @@
 
 FILES = manifest.json \
         storage.js \
+        contentscript.js \
         background.js \
         iconupdater.js \
         options.html \
@@ -34,4 +35,4 @@ clean:
 
 # Starts local debug session
 run: icons/$(ADDON)-light.svg
-	web-ext run --bc
+	web-ext run --bc -u "https://m-reimer.de/languageswitch/"

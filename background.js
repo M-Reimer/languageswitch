@@ -1,6 +1,6 @@
 /*
     Firefox addon "Language Switch"
-    Copyright (C) 2020  Manuel Reimer <manuel.reimer@gmx.de>
+    Copyright (C) 2021  Manuel Reimer <manuel.reimer@gmx.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ async function SetCurrentValue(aValue, aStore = true) {
 
   // Update status based on the given value
   gAcceptLanguage = LanguageStringToAcceptLanguage(aValue);
-  OverrideNavigatorLanguage(aValue);
+  await OverrideNavigatorLanguage(aValue);
   browser.browserAction.setBadgeText({text: aValue.substr(0, 2)});
 
   // Reload current tab if enabled in settings
@@ -76,8 +76,20 @@ async function SetCurrentValue(aValue, aStore = true) {
 
 // Register event listener to receive change requests from our popup
 browser.runtime.onMessage.addListener((data, sender) => {
-  if (data.type == "SetCurrentValue")
-    SetCurrentValue(data.value);
+  if (data.type == "SetCurrentValue") {
+    SetCurrentValue(data.value).then(() => {
+      let languages = data.value.split(",").map(e => e.replace(/[^a-zA-Z-]/g, ""));
+      // Once the "navigator" properties have been overwritten in a page, we
+      // have to provide a value when updating. So get it from our window
+      if (languages.length == 0 || languages[0] == "")
+        languages = window.navigator.languages;
+      browser.tabs.query({}).then(tabs => {
+        for (let tab of tabs)
+          browser.tabs.sendMessage(tab.id, {type: "languagechange",
+                                            languages: languages});
+      });
+    })
+  }
 });
 
 // This block injects our language override into "navigator.language"
@@ -94,9 +106,7 @@ async function OverrideNavigatorLanguage(aValue) {
 
   // If a language is set, then override "navigator.language(s)".
   if (languages.length != 0 && languages[0] != "") {
-    const script =
-    "Object.defineProperty(window.navigator.wrappedJSObject, 'language', {value: '" + languages[0] + "'});" +
-    "Object.defineProperty(window.navigator.wrappedJSObject, 'languages', {value: cloneInto(['" + languages.join("','") + "'], window.navigator)});";
+    const script = "LANGUAGES = " + JSON.stringify(languages) + ";Setup();";
     gContentScript = await browser.contentScripts.register({
       "js": [{code: script}],
       "matches": ["<all_urls>"],
