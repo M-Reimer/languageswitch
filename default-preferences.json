@@ -1,0 +1,17 @@
+{
+  // TRANSLATION NOTE!
+  // These defaults are only here as an example and to have some entries
+  // directly after installation.
+  // Please *NO* pull-requests to add your language here!
+  //        ‾‾‾‾
+  "menuentries": [
+    ["__MSG_menuentryDefault__",  ""],
+    ["__MSG_menuentryEnglish__",  "en-US,en"],
+    ["__MSG_menuentryFrench__",   "fr-FR,fr,en-US,en"],
+    ["__MSG_menuentryGerman__",   "de-DE,de,en-US,en"],
+    ["__MSG_menuentryJapanese__", "ja,en-US,en"],
+    ["__MSG_menuentrySpanish__",  "es-ES,es,en-US,en"]
+  ],
+  "currentvalue": "",
+  "autoreload": false
+}

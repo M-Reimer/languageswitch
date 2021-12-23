@@ -4,10 +4,11 @@
 #
 
 FILES = manifest.json \
-        storage.js \
+        default-preferences.json \
         contentscript.js \
         background.js \
         utils/iconupdater.js \
+        utils/storage.js \
         options.html \
         options.js \
         options.css \
