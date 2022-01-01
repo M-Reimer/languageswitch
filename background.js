@@ -17,7 +17,7 @@
 */
 
 // Holds the current Accept-Language value
-let gAcceptLanguage;
+let gAcceptLanguage = "";
 
 // Loads settings from storage
 async function LoadSettings() {
@@ -54,7 +54,7 @@ async function SetCurrentValue(aValue, aStore = true) {
   aValue = aValue.replace(/[^a-zA-Z,-]/g, "");
 
   // If this is the last set value, then return
-  if (aValue == _last_value)
+  if (aValue === _last_value)
     return;
 
   // Update status based on the given value
