@@ -22,16 +22,6 @@ const checkAutoReload = document.getElementById("autoreload_checkbox");
 let gMenuentries;
 
 async function Init() {
-  [
-    "general_headline",
-    "autoreload_label",
-    "menuentries_headline",
-    "menuitem_label_label",
-    "menuitem_value_label"
-  ].forEach((id) => {
-    document.getElementById(id).textContent = browser.i18n.getMessage(id);
-  });
-
   document.getElementById("add_button").addEventListener("click", ListItemAddClicked);
 
   await loadOptions();

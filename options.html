@@ -6,13 +6,14 @@
   </head>
   <body>
     <form>
-      <h1 id="general_headline">General</h1>
+      <h1 data-i18n-id="general_headline">General</h1>
       <input type="checkbox" id="autoreload_checkbox"/>
-      <label for="autoreload_checkbox" id="autoreload_label">Automatically reload current page on switch</label>
-      <h1 id="menuentries_headline">Language menu entries</h1>
+      <label for="autoreload_checkbox" data-i18n-id="autoreload_label">Automatically reload current page on switch</label>
+
+      <h1 data-i18n-id="menuentries_headline">Language menu entries</h1>
       <div id="menulist_header">
-        <div id="menuitem_label_label" class="menuitem_label">Label</div>
-        <div id="menuitem_value_label" class="menuitem_value">Value</div>
+        <div data-i18n-id="menuitem_label_label" class="menuitem_label">Label</div>
+        <div data-i18n-id="menuitem_value_label" class="menuitem_value">Value</div>
         <img id="add_button" src="icons/add.svg"/>
       </div>
       <div id="menulist">
@@ -26,6 +27,7 @@
       <img class="delete_button" src="icons/delete.svg"/>
     </div>
     <script src="utils/storage.js"></script>
+    <script src="utils/html-i18n.js"></script>
     <script src="options.js"></script>
   </body>
 </html>

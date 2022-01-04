@@ -9,6 +9,7 @@ FILES = manifest.json \
         background.js \
         utils/iconupdater.js \
         utils/storage.js \
+        utils/html-i18n.js \
         options.html \
         options.js \
         options.css \
