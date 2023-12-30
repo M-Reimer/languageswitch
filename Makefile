@@ -13,6 +13,7 @@ FILES = manifest.json \
         options.html \
         options.js \
         options.css \
+        utils/options.css \
         $(wildcard popup/choose_language.*) \
         $(wildcard _locales/*/messages.json) \
         $(wildcard icons/*.svg)

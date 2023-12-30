@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="utils/options.css"/>
     <link href="options.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width"/>
   </head>
   <body>
     <form>
       <h1 data-i18n-id="general_headline">General</h1>
-      <input type="checkbox" id="autoreload_checkbox"/>
-      <label for="autoreload_checkbox" data-i18n-id="autoreload_label">Automatically reload current page on switch</label>
+      <div class="checkbox">
+        <input type="checkbox" id="autoreload_checkbox"/>
+        <label for="autoreload_checkbox" data-i18n-id="autoreload_label">Automatically reload current page on switch</label>
+      </div>
 
       <h1 data-i18n-id="menuentries_headline">Language menu entries</h1>
       <div id="menulist_header">
