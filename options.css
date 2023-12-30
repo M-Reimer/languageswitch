@@ -1,0 +1,53 @@
+/*
+    WebExtension utils for use in my Firefox Add-ons
+    Copyright (C) 2023  Manuel Reimer <manuel.reimer@gmx.de>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* This CSS file contains some styles I use for my option pages */
+
+/* Dark them support */
+
+:root {
+  --page-bg-color: #fff;
+  --page-fg-color: #15141a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg-color: #23222b;
+    --page-fg-color: #fbfbfe;
+  }
+}
+
+body {
+  background-color: var(--page-bg-color);
+  color: var(--page-fg-color);
+}
+
+/* Style for a checkbox with label, grouped by a <div> */
+
+div.checkbox {
+  display: flex;
+  margin: 4px 0px;
+}
+
+div.checkbox input {
+  margin: 2px 6px 2px 0px;
+}
+
+div.checkbox label {
+  margin: 1px 0px;
+}
