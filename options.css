@@ -35,6 +35,7 @@
 body {
   background-color: var(--page-bg-color);
   color: var(--page-fg-color);
+  min-height: 250px; /* This fills the space in the add-ons manager */
 }
 
 /* Style for a checkbox with label, grouped by a <div> */
